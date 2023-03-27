@@ -65,6 +65,7 @@
             btnGirisYap.TabIndex = 6;
             btnGirisYap.Text = "GİRİŞ YAP";
             btnGirisYap.UseVisualStyleBackColor = false;
+            btnGirisYap.Click += btnGirisYap_Click;
             // 
             // btnKayitOl
             // 
@@ -89,6 +90,7 @@
             checkBoxHatirla.TabIndex = 4;
             checkBoxHatirla.Text = "Beni Hatırla !";
             checkBoxHatirla.UseVisualStyleBackColor = false;
+            checkBoxHatirla.CheckedChanged += checkBoxHatirla_CheckedChanged;
             // 
             // txtSifre
             // 
@@ -96,6 +98,7 @@
             txtSifre.Name = "txtSifre";
             txtSifre.Size = new Size(132, 23);
             txtSifre.TabIndex = 3;
+            txtSifre.KeyPress += txtSifre_KeyPress;
             // 
             // txtEmail
             // 

@@ -45,8 +45,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.White;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Teal;
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(47, 48);
             label1.Name = "label1";
             label1.Size = new Size(44, 21);
@@ -56,8 +57,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.White;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.Teal;
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(21, 96);
             label2.Name = "label2";
             label2.Size = new Size(70, 21);
@@ -67,8 +69,9 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.White;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.Teal;
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(39, 141);
             label3.Name = "label3";
             label3.Size = new Size(52, 21);
@@ -78,8 +81,9 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.White;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.Teal;
+            label4.ForeColor = Color.Black;
             label4.Location = new Point(43, 180);
             label4.Name = "label4";
             label4.Size = new Size(48, 21);
@@ -89,8 +93,9 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.White;
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.Teal;
+            label5.ForeColor = Color.Black;
             label5.Location = new Point(21, 222);
             label5.Name = "label5";
             label5.Size = new Size(70, 21);
@@ -147,6 +152,7 @@
             btnGirisYap.TabIndex = 11;
             btnGirisYap.Text = "GİRİŞ YAP";
             btnGirisYap.UseVisualStyleBackColor = true;
+            btnGirisYap.Click += btnGirisYap_Click;
             // 
             // dateTimePicker1
             // 
@@ -160,6 +166,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Orange;
+            BackgroundImage = Properties.Resources.doga;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(369, 371);
             Controls.Add(dateTimePicker1);
             Controls.Add(btnGirisYap);
@@ -175,6 +183,7 @@
             Controls.Add(label1);
             Name = "FrmKayitOl";
             Text = "FrmKayitOl";
+            FormClosed += FrmKayitOl_FormClosed;
             Load += FrmKayitOl_Load;
             ResumeLayout(false);
             PerformLayout();

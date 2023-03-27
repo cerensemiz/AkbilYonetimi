@@ -57,11 +57,12 @@ namespace AkbilYonetimiUI
                 int rowsEffected = eklemeKomutu.ExecuteNonQuery();// insert update delete icin kullanilir.
                 if (rowsEffected > 0)
                 {
-                    MessageBox.Show("Kayit Eklendi!","UYARI",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("KAYIT EKLENDİ !", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GirisFomunaGit();
                 }
                 else
                 {
-                    MessageBox.Show("Kayit Eklenemedi!","UYARI",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                    MessageBox.Show("KAYIT EKLENMEDİ !", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
                 baglanti.Close();
                 //Temizlik gerekli
@@ -71,6 +72,24 @@ namespace AkbilYonetimiUI
                 //ex log.txt'ye yazılacak (loglama) 
                 MessageBox.Show("Beklenmedik bir hata oluştu! Lütfen tekrar deneyiniz !"); ;
             }
+        }
+
+        private void GirisFomunaGit()
+        {
+            Form1 frmG = new Form1();
+            frmG.Email = textBoxEmail.Text.Trim();
+            this.Hide();
+            frmG.Show();
+        }
+
+        private void FrmKayitOl_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GirisFomunaGit();
+        }
+
+        private void btnGirisYap_Click(object sender, EventArgs e)
+        {
+            GirisFomunaGit();
         }
     }
 }
